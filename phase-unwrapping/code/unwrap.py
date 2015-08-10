@@ -129,4 +129,9 @@ G = maxflow.Graph[float](0, 0)
 
 # TO DO: Save the unwrapped image and compare with original.
 
+# We are almost done. What do you think would have happened if we dis not use the mask? Can you make a simple
+# adjustment to the program to compute the solution without the mask? Compare the result with the result you
+# got when you computed the brain mask.
 
+# TO DO: Change the code to compute the solution without a mask. Discuss the difference between the two
+# solutions.
