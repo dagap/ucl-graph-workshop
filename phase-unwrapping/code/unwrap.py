@@ -41,7 +41,7 @@ args = parser.parse_args()
 # Refer to the image.py file to see how you can load a nifti image
 # from a file. In particular, see Image.from_file function.
 
-# Load the two images.
+# TO DO: Load the two images.
 
 # Step 2: Phase is only uniquely defined in the 2 PI range. Scale the input image so that
 # it is in the principal range.
@@ -72,12 +72,11 @@ args = parser.parse_args()
 # at that voxel. Create a numpy array of labels of the correct size and set it to zero.
 # This will be our initial estimate of the labels.
 
-# TO DO: Create a numpy array of zeros representing the initial label values.
+# TO DO: Create the initial labels and initialize them to a suitable value.
 
 # Before we start the optimization, we should compute the initial energy of the current
 # configuration. Write a function called compute_energy that computes the initial energy based
 # on the sum of squared errors for each of the MRF cliques.
-# Consider which voxels you need to take into account.
 
 # TO DO: Write the energy function.
 
@@ -91,7 +90,7 @@ G = maxflow.Graph[float](0, 0)
 # TO DO: Create the graph nodes. In particular, you might want to see the help on Graph.add_nodes()
 # method. Check out the examples at http://pmneila.github.io/PyMaxflow/ to see how to do this.
 
-# Now we need to create the edges. See the handout for the edge weights and how they are calculated.
+# Now we need to create the edges. See the paper by Kolmogorov and Zabih on how to construct the edges.
 # See the pymaxflow documentation on how to add these edges.
 
 # To DO: Write a function to create the edges on the graph.
@@ -105,7 +104,7 @@ G = maxflow.Graph[float](0, 0)
 # MRF energy configuration for this binary step. Based on the result, we can update our labels.
 # Write a function which updates the labels based on which segment the node belongs to.
 
-# TO DO: Write a function called upate_labels which update the current label configuration.
+# TO DO: Write a function called update_labels which update the current label configuration.
 
 # Compute the new energy of the MRF configuration. Does it go down from the original configuration?
 
